@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 * {
     border: 0;
     margin: 0;
@@ -7,17 +10,84 @@
 body {
     font-family: Calibri;
     font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 1rem;
 }
 
 .container {
+    display: block;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    height: 430px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+}
+
+.container-card .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    height: 310px;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    width: 330px;
+}
+
+.container-card .card:hover {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-15px);
+}
+
+.container-card .card img {
+    height: 220px;
+    width: 240px;
+}
+
+.container-card .card a {
+    color: #3498db;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container-card .card h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: .5rem;
+}
+
+
+.container-card .card p {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: .3rem;
+}
+
+/* .footer {
+    background-color: #d8d5d5;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+} */
+
 .header {
-    background-color: #333;
+    background-color: #000000;
     color: whitesmoke;
-    padding: .5rem 0;
+    margin-bottom: 1rem;
+    opacity: .7;
+    padding: .6rem 0;
+    position: fixed;
+    width: 100%;
 }
 
 .header a {
@@ -25,14 +95,26 @@ body {
     text-decoration: none;
 }
 
+.header span{
+    color: #4FFF54;
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+}
+
 .logo {
     width: 80px;
 }
 
 .logo-nav-container {
+    align-items: center; /* Alineamento entre si de elementos flex */
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alineamento entre si de elementos flex */
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.main {
+    padding-top: 6.5rem;
 }
 
 .navigation ul {
@@ -47,11 +129,29 @@ body {
     border-radius: .4rem;
     display: block;
     padding: 0 0.7rem;
+    transition-property: background-color;
+    transition-duration: 500ms;
 }
 
 /* Houver hace referencia a cuando se situa el mouse en el elemento.*/
 .navigation ul li a:hover {
     background-color: #E3E3E3;
-    color: #333;
-    transition: all .3s linear;
+    color: #000000;
+}
+
+/* Estilos CSS que aplicarán solo cuando el ancho de la pantalla es <=530px */
+@media only screen and (max-width: 530px){
+    
+    .navigation ul li {
+        display: block;
+    }
+    
+    .navigation ul li a {
+        border-radius: .4rem;
+        display: block;
+        padding: 0 0.7rem;
+        transition-property: background-color;
+        transition-duration: 500ms;
+    }
+    
 }
