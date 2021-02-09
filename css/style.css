@@ -14,22 +14,37 @@ body {
     width: 100%;
 }
 
-h1 {
-    margin-bottom: 1rem;
+.cart-dropdown-data {
+    display: inline-block;
+}
+
+.cart-dropdown-img {
+    display: inline-block;
+}
+
+.cart-dropdown-img img {
+    height: 50px;
+    width: 50px;
+}
+
+.cart-icon {
+    height: 30px ;
+    width: 30px;
+}
+
+.cart-icon:hover {
+    cursor: pointer;
 }
 
 .container {
     display: block;
     margin: 0 auto;
-    /* max-width: 1200px; */
 }
 
 .container-card {
     display: flex;
     flex-wrap: wrap;
-    height: 430px;
     justify-content: center;
-    max-width: 1000px;
     margin: auto;
     width: 100%;
 }
@@ -37,7 +52,7 @@ h1 {
 .container-card .card {
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    height: 310px;
+    height: 20.8rem;
     margin: 20px;
     overflow: hidden;
     text-align: center;
@@ -46,8 +61,8 @@ h1 {
 }
 
 .container-card .card:hover {
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 .container-card .card img {
@@ -55,10 +70,17 @@ h1 {
     width: 240px;
 }
 
-.container-card .card a {
+.container-card .card button {
+    background-color: white;
     color: #3498db;
+    font-family: arial;
+    font-size: .85rem;
     font-weight: 500;
     text-decoration: none;
+}
+
+.container-card .card button:hover {
+    cursor: pointer;
 }
 
 .container-card .card h4 {
@@ -66,23 +88,24 @@ h1 {
     margin-bottom: .5rem;
 }
 
-
 .container-card .card p {
     font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: .3rem;
 }
 
-/* .footer {
-    background-color: #d8d5d5;
-    margin-top: 3rem;
-    padding: 2rem 0;
+.container-card .card input {
+    border: thin solid #AFAFAF;
+    border-radius: .3rem;
     text-align: center;
-    width: 100%;
-} */
+    width: 2rem;
+}
 
+
+/* TODO Hacer responsive el header para resoluciones menores a 1200px */
 .header {
     background-color: #000000;
-    color: whitesmoke;
+    display: flex;
+    justify-content: center;
     margin-bottom: 1rem;
     opacity: .7;
     padding: .6rem 0;
@@ -90,31 +113,64 @@ h1 {
     width: 100%;
 }
 
-.header a {
-    color: whitesmoke;
-    text-decoration: none;
+.header-cartbutton-container {
+    align-items: center;
+    display: flex;
+    height: 75px;
+    justify-content: flex-end;
+    width: 400px;
 }
 
-.header span {
-    color: #4FFF54;
-    font-family: 'Abel', sans-serif;
-    font-size: 2rem;
+.header-cartbutton-container a {
+    margin-right: 1rem;
 }
 
-.logo {
+.header-logo-container {
+    align-items: center;
+    display: flex;
+    height: 75px;
+    width: 400px;
+}
+
+.header-logo-container img {
+    display: flex;
+    margin-left: 1rem;
     width: 80px;
 }
 
-.logo-nav-container {
-    align-items: center; /* Alineamento entre si de elementos flex */
+.header-logo-tit-but-container {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
+    height: 75px;
+    width: 1200px;
+}
+
+.header-main-title {
+    align-items: center;
+    color: #4FFF54;
+    display: flex;
+    height: 75px;
+    justify-content: center;
+    width: 400px;
+}
+
+.header-main-title h1 { 
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .main {
     padding-top: 6.5rem;
+}
+
+/* It applied when the header had the "Inicio", "Quienes somos" & "Contacto" buttons. */
+
+/*
+
+.header a {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .navigation ul {
@@ -133,13 +189,11 @@ h1 {
     transition-duration: 500ms;
 }
 
-/* Houver hace referencia a cuando se situa el mouse en el elemento.*/
 .navigation ul li a:hover {
     background-color: #E3E3E3;
     color: #000000;
 }
 
-/* Estilos CSS que aplicarán solo cuando el ancho de la pantalla es <=530px */
 @media only screen and (max-width: 530px){
 
     .navigation ul li {
@@ -154,4 +208,12 @@ h1 {
         transition-duration: 500ms;
     }
     
-}
+} */
+
+/* .footer {
+    background-color: #d8d5d5;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+} */
