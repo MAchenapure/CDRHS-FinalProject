@@ -14,11 +14,11 @@ let zapNikeAirMot2 = new Product('Zapatillas Nike Airmax Motion 2', '9299', '10'
 let buzoPumaClass = new Product('Buzo Puma Classic', '5499', '15', 'imgs/buzo-puma-classic.jpg');
 let zapAdiOrigRunRosa = new Product('Zapatillas Adidas Originals Run', '7499', '5', 'imgs/adidas-originals-run.jpg')
 
-productsDB[0] = zapNikeAirMot2;
-productsDB[1] = buzoPumaClass;
-productsDB[2] = zapAdiOrigRunRosa;
+productsDB.push(zapNikeAirMot2);
+productsDB.push(buzoPumaClass);
+productsDB.push(zapAdiOrigRunRosa);
 
-if (document.querySelector('.main')) {
+if (document.querySelector('.main-container')) {
     for (let i = 0; i < productsDB.length; i++) {
         productsDB[i].printCard(i);
     }

@@ -19,7 +19,7 @@ class Product{
 
     printCard(productIndex){
         let newNode = document.createElement('div');
-        newNode.className = 'card'
+        newNode.className = 'card-product'
         newNode.innerHTML = `
         <img src="${this.img}">
         <h4>${this.name}</h4>

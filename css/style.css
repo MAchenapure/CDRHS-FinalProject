@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Calibri;
+    font-family: 'Calibri';
     font-size: 16px;
     height: 100%;
     width: 100%;
@@ -49,7 +49,7 @@ body {
     width: 100%;
 }
 
-.container-card .card {
+.container-card .card-product {
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     height: 20.8rem;
@@ -60,17 +60,18 @@ body {
     width: 330px;
 }
 
-.container-card .card:hover {
+.container-card .card-product:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
 
-.container-card .card img {
+.container-card .card-product img {
     height: 220px;
+    margin-bottom: .4rem;
     width: 240px;
 }
 
-.container-card .card button {
+.container-card .card-product button {
     background-color: white;
     color: #3498db;
     font-family: arial;
@@ -79,91 +80,74 @@ body {
     text-decoration: none;
 }
 
-.container-card .card button:hover {
+.container-card .card-product button:hover {
     cursor: pointer;
 }
 
-.container-card .card h4 {
+.container-card .card-product h4 {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: .5rem;
 }
 
-.container-card .card p {
+.container-card .card-product p {
     font-family: 'Roboto Condensed', sans-serif;
-    margin-bottom: .3rem;
+    margin: 0 auto;
 }
 
-.container-card .card input {
+.container-card .card-product input {
     border: thin solid #AFAFAF;
     border-radius: .3rem;
+    font-size: .9rem;
+    height: 1.3rem;
+    margin: 0 auto;
     text-align: center;
     width: 2rem;
 }
 
 
 /* TODO Hacer responsive el header para resoluciones menores a 1200px */
+
 .header {
     background-color: #000000;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    opacity: .7;
-    padding: .6rem 0;
     position: fixed;
     width: 100%;
 }
 
-.header-cartbutton-container {
+.header-container {
     align-items: center;
     display: flex;
-    height: 75px;
-    justify-content: flex-end;
-    width: 400px;
+    height: 7rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
-.header-cartbutton-container a {
-    margin-right: 1rem;
+.header-brand-logo {
+    height: 80px;
 }
 
-.header-logo-container {
-    align-items: center;
-    display: flex;
-    height: 75px;
-    width: 400px;
-}
-
-.header-logo-container img {
-    display: flex;
-    margin-left: 1rem;
-    width: 80px;
-}
-
-.header-logo-tit-but-container {
-    align-items: center;
-    display: flex;
-    height: 75px;
-    width: 1200px;
-}
-
-.header-main-title {
-    align-items: center;
+.header-brand-title {
     color: #4FFF54;
-    display: flex;
-    height: 75px;
-    justify-content: center;
-    width: 400px;
-}
-
-.header-main-title h1 { 
     font-family: 'Abel', sans-serif;
     font-size: 2rem;
     font-weight: 500;
+    left: 45%;
+    position: absolute;
+    top: 35%;
 }
 
-.main {
-    padding-top: 6.5rem;
+.main-container {
+    padding-top: 8rem;
 }
 
+
+/* @media only screen and (max-width: 1200px){
+    .header-logo-tit-but-container {
+        background-color: tomato;
+    }
+}*/
 /* It applied when the header had the "Inicio", "Quienes somos" & "Contacto" buttons. */
 
 /*
