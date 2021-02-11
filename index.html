@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    
     <!-- Header and nav bar -->
     <header class="header">
         <div class="header-container">
@@ -18,21 +19,25 @@
                 <img src="imgs/logo/Velret-white2.png" alt="Velret" class="header-brand-logo">
             </a>
             <h1 class="header-brand-title">VELRET SHOP</h1>
-                <a href="cart.html" title="Carrito">
+
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="imgs/cart.png" class="cart-icon">
-                </a>
-                    <!-- Estructura del dropdown.
-                    <ul>
-                        <li>
-                            <div class="cart-dropdown-img">
-                                <img src="imgs/nike-airmax-motion2.jpg">
-                            </div>
-                            <div class="cart-dropdown-data">
-                                <h4>Zapatillas Nike Airmax Motion 2</h4>
-                                <p>Precio: $9299</p>
-                            </div>
-                        </li>
-                    </ul> -->
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end header-dropdown">
+                    <li class="header-dropdown-item">
+                        <img src="imgs/nike-airmax-motion2.jpg">
+                        <div class="header-dropdown-info">
+                            <h5>Zapatillas Nike Airmax Motion 2</h5>
+                            <p>Cantidad: 2</p>
+                        </div>
+                        <div class="header-dropdown-price">
+                            <p>Precio total: $9299</p>
+                        </div>
+                    </li>
+                    <li><button class="dropdown-item header-dropdown-btn" type="button"><a href="cart.html">Ver más detalles</a></button></li>
+                </ul>
+            </div>                
         </div> 
     </header>
 

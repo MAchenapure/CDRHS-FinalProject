@@ -8,6 +8,7 @@
 
 .main-cart h1 {
     font-weight: 600;
+    font-size: 2rem;
     margin-bottom: .3rem;
 }
 
@@ -38,9 +39,25 @@
 }
 
 .cart-card-info {
+    display: table;
+    line-height: 1.3rem;
     margin-left: 1.7rem;
     min-width: 200px;
     width: 640px;
+    padding: 0;
+}
+
+.cart-card-info h2 {
+    display: table-row;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    vertical-align: middle;
+}
+
+.cart-card-info p {
+    display: table-row;
+    vertical-align: middle;
 }
 
 .cart-card-price {
@@ -50,6 +67,7 @@
     justify-content: flex-end;
     margin-left: 6rem;
     min-width: 8rem;
+    height: 2rem;
 }
 
 .cart-card-remove {
