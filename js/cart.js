@@ -8,6 +8,7 @@ class Cart{
     
     addProduct(index){
         productsDB[index].setQuantity(parseInt(document.getElementById(`inputQuant${index}`).value));
+        // TODO Con el value de la línea 10 puedo hacer una validación de cantidad requerida por el usuario, siendo cantidad > 0. (cantidad = document.getElementById(`inputQuant${index}`).value) 
         productsDB[index].setTotalPrice();
         this.content.push(productsDB[index]);
         localStorage.setItem('cart', JSON.stringify(cart.getContent()));
@@ -76,28 +77,46 @@ class Cart{
     }
 
     printCart(){
-        if (document.querySelector('.main')) { // Cart printing on index.html - TODO Falta diseñar el dropdown en el icono del carrito. 
-
-            // let element = document.getElementById('containerCart');
-            // console.log(`Logged by printCart. Main page.`)
-            // for(let i=0; i<cart.length; i++){
-            //     let newNode = document.createElement('div');
-            //     newNode.innerHTML = `
-            //     <img src="${cart[i].img}">
-            //     <h6>${cart[i].name}</h6>
-            //     <p>Precio: $${cart[i].price}</p>
-            //     `
-            //     element.appendChild(newNode);
-            // }
-    
-        } else if (document.querySelector('.main-cart')) { // Cart printing on cart.html
+        // Cart printing on header.  
+        let element = document.getElementById('dropdownMenu');
+        
+        // While structure to delete all childs from dropdownMenu after adding a new product to the cart. Reboot the cart printing with the new elements.
+        while (element.firstChild) {
+            element.removeChild(element.lastChild);
+        }
+        
+        for (let i = 0; i < cart.getLength(); i++) {
+            let newNode = document.createElement('li');
+            newNode.className = 'header-dropdown-item';
+            newNode.innerHTML = `
+            <img src="${cart.getProductImage(i)}">
+            <div class="header-dropdown-info">
+                <h5>${cart.getProductName(i)}</h5>
+                <p>Cantidad: ${cart.getProductQuantity(i)}</p>
+            </div>
+            <div class="header-dropdown-price">
+                <p>Precio total: $${cart.getProductTotalPrice(i)}</p>
+            </div>
+            `
+            element.appendChild(newNode);
+        }
+        
+        let newNode = document.createElement('li');
+        newNode.className = 'header-dropdown-btncontainer';
+        newNode.innerHTML = `
+        <a href="cart.html" class="header-dropdown-btn">Ver más detalles</a>
+        `
+        element.appendChild(newNode);
+        // <button class="dropdown-item header-dropdown-btn header-dropdown-detailsbtn" type="button"><a href="cart.html">Ver más detalles</a></button>
+        
+        // Cart printing on cart.html
+        if (document.querySelector('.main-cart')) {
             
             let element = document.getElementById('containerCart-cartPage');
             let elementCartEmpty = document.getElementById('containerCartEmpty');
             let elementFinalPrice = document.getElementById('totalPriceContainer');
 
             if (cart.getLength() > 0) {
-
                 // While structure to delete all childs from containerCart after adding a new product to the cart. Reboot the cart printing with the new elements.
                 while (element.firstChild) {
                     element.removeChild(element.lastChild);
@@ -146,8 +165,8 @@ class Cart{
                 </div>
                 `
                 elementFinalPrice.appendChild(newNode);
-            } else {
 
+            } else {
                 while (element.firstChild) {
                     element.removeChild(element.lastChild);
                 }
@@ -191,4 +210,3 @@ class Cart{
     }
 
 }
-

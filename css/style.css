@@ -50,14 +50,16 @@ body {
 }
 
 .container-card .card-product {
+    border: thin solid #DDDDDD;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    height: 20.8rem;
+    height: 22rem;
     margin: 20px;
     overflow: hidden;
+    padding-top: .7rem;
     text-align: center;
     transition: all 0.25s;
-    width: 330px;
+    width: 20.6rem;
 }
 
 .container-card .card-product:hover {
@@ -110,6 +112,7 @@ body {
     background-color: #000000;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .header-brand-logo {
@@ -136,18 +139,31 @@ body {
 }
 
 .header-dropdown {
+    border: thin solid #AFAFAF;
+    padding: 0;
     width: 25rem!important;
 }
 
 .header-dropdown-btn {
     display: flex;
-    margin-top: .2rem;
+    margin: .3rem 0;
+    justify-content: center;
+    width: 8rem;
+}
+
+.header-dropdown-btn:active {
+    background-color: white;
+}
+
+.header-dropdown-btncontainer {
+    display: flex;
     justify-content: center;
 }
 
 .header-dropdown-info {
     display: table;
     margin-left: 1rem;
+    min-width: 12rem;
 }
 
 .header-dropdown-info h5 {
@@ -166,9 +182,9 @@ body {
 
 .header-dropdown-item {
     align-items: center;
-    border-bottom: thin solid #AFAFAF;
+    border-bottom: thin solid #DDDDDD;
     display: flex;
-    padding-bottom: .3rem;
+    padding: .3rem 0;
 }
 
 .header-dropdown-item img {
