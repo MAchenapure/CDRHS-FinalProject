@@ -109,7 +109,7 @@ body {
 }
 
 .header {
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.85);
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -163,7 +163,7 @@ body {
 .header-dropdown-info {
     display: table;
     margin-left: 1rem;
-    min-width: 12rem;
+    width: 12rem;
 }
 
 .header-dropdown-info h5 {
@@ -208,27 +208,3 @@ body {
 .main-container {
     padding-top: 8rem;
 }
-
-/* @media only screen and (max-width: 530px){
-
-    .navigation ul li {
-        display: block;
-    }
-    
-    .navigation ul li a {
-        border-radius: .4rem;
-        display: block;
-        padding: 0 0.7rem;
-        transition-property: background-color;
-        transition-duration: 500ms;
-    }
-    
-} */
-
-/* .footer {
-    background-color: #d8d5d5;
-    margin-top: 3rem;
-    padding: 2rem 0;
-    text-align: center;
-    width: 100%;
-} */
