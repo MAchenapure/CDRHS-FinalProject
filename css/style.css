@@ -141,7 +141,7 @@ body {
 .header-dropdown {
     border: thin solid #AFAFAF;
     padding: 0;
-    width: 25rem!important;
+    width: 25rem;
 }
 
 .header-dropdown-btn {
@@ -158,6 +158,14 @@ body {
 .header-dropdown-btncontainer {
     display: flex;
     justify-content: center;
+}
+
+.header-dropdown-emptycart {
+    align-items: center;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    width: 10rem;
 }
 
 .header-dropdown-info {

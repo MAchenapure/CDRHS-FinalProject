@@ -85,30 +85,42 @@ class Cart{
             element.removeChild(element.lastChild);
         }
         
-        for (let i = 0; i < cart.getLength(); i++) {
+        if (cart.getLength() > 0) {
+            $('.header-dropdown').css('width','25rem');
+
+            for (let i = 0; i < cart.getLength(); i++) {
+                let newNode = document.createElement('li');
+                newNode.className = 'header-dropdown-item';
+                newNode.innerHTML = `
+                <img src="${cart.getProductImage(i)}">
+                <div class="header-dropdown-info">
+                    <h5>${cart.getProductName(i)}</h5>
+                    <p>Cantidad: ${cart.getProductQuantity(i)}</p>
+                </div>
+                <div class="header-dropdown-price">
+                    <p>Precio total: $${cart.getProductTotalPrice(i)}</p>
+                </div>
+                `
+                element.appendChild(newNode);
+            }
+            
             let newNode = document.createElement('li');
-            newNode.className = 'header-dropdown-item';
+            newNode.className = 'header-dropdown-btncontainer';
             newNode.innerHTML = `
-            <img src="${cart.getProductImage(i)}">
-            <div class="header-dropdown-info">
-                <h5>${cart.getProductName(i)}</h5>
-                <p>Cantidad: ${cart.getProductQuantity(i)}</p>
-            </div>
-            <div class="header-dropdown-price">
-                <p>Precio total: $${cart.getProductTotalPrice(i)}</p>
-            </div>
+            <a href="cart.html" class="header-dropdown-btn">Ver más detalles</a>
+            `
+            element.appendChild(newNode);
+        } else {
+            $('.header-dropdown').css('width','10rem');
+
+            let newNode = document.createElement('li');
+            newNode.className = 'header-dropdown-emptycart'
+            newNode.innerHTML = `
+            Tu carrito está vacio
             `
             element.appendChild(newNode);
         }
-        
-        let newNode = document.createElement('li');
-        newNode.className = 'header-dropdown-btncontainer';
-        newNode.innerHTML = `
-        <a href="cart.html" class="header-dropdown-btn">Ver más detalles</a>
-        `
-        element.appendChild(newNode);
-        // <button class="dropdown-item header-dropdown-btn header-dropdown-detailsbtn" type="button"><a href="cart.html">Ver más detalles</a></button>
-        
+
         // Cart printing on cart.html
         if (document.querySelector('.main-cart')) {
             
