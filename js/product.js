@@ -1,12 +1,17 @@
 class Product{
     
-    constructor(name, price, stock, img){
+    constructor(name, price, stock, img, gender){
         this.img=img;
         this.name=name;
         this.price=Number(price);
         this.quantity=0;
         this.stock=stock;
         this.totalPrice=0;
+        this.gender=gender;
+    }
+
+    getGender(){
+        return this.gender;
     }
 
     getTotalPrice(){

@@ -7,17 +7,24 @@ class Cart{
     }
     
     addProduct(index){
-        productsDB[index].setQuantity(parseInt(document.getElementById(`inputQuant${index}`).value));
-        // TODO Con el value de la línea 10 puedo hacer una validación de cantidad requerida por el usuario, siendo cantidad > 0. (cantidad = document.getElementById(`inputQuant${index}`).value) 
-        productsDB[index].setTotalPrice();
-        this.content.push(productsDB[index]);
-        localStorage.setItem('cart', JSON.stringify(cart.getContent()));
-        for(let i=0; i<this.length; i++) {
-            this.content[i].price = Number(this.content[i].price);
-            this.content[i].stock = Number(this.content[i].stock);
+        let quantityInput = parseInt(document.getElementById(`inputQuant${index}`).value);
+
+        if (quantityInput > 0) {
+            productsDB[index].setQuantity(quantityInput);
+            productsDB[index].setTotalPrice();
+            this.content.push(productsDB[index]);
+            localStorage.setItem('cart', JSON.stringify(cart.getContent()));
+            for(let i=0; i<this.length; i++) {
+                this.content[i].price = Number(this.content[i].price);
+                this.content[i].stock = Number(this.content[i].stock);
+            }
+            this.setLength();
+            this.printCart();
         }
-        this.setLength();
-        this.printCart();
+        else {
+            $('#quantModal').fadeIn(150);
+        }
+
     }
 
     addStorage(data){
@@ -35,7 +42,6 @@ class Cart{
         return this.content;
     }
 
-    
     getLength(){
         return this.length;
     }
@@ -79,15 +85,21 @@ class Cart{
     printCart(){
         // Cart printing on header.  
         let element = document.getElementById('dropdownMenu');
+        let elementBadget = document.getElementById('badgetCartCont');
         
         // While structure to delete all childs from dropdownMenu after adding a new product to the cart. Reboot the cart printing with the new elements.
         while (element.firstChild) {
             element.removeChild(element.lastChild);
         }
+        while (elementBadget.firstChild) {
+            elementBadget.removeChild(elementBadget.lastChild);
+        }
+        
         
         if (cart.getLength() > 0) {
             $('.header-dropdown').css('width','25rem');
-
+            $('.header-dropdown-mainbtn').css('width','5.3rem');
+            
             for (let i = 0; i < cart.getLength(); i++) {
                 let newNode = document.createElement('li');
                 newNode.className = 'header-dropdown-item';
@@ -110,13 +122,22 @@ class Cart{
             <a href="cart.html" class="header-dropdown-btn">Ver más detalles</a>
             `
             element.appendChild(newNode);
+
+            let newNodeBadget = document.createElement('span');
+            newNodeBadget.className = 'badge bg-secondary bg-danger';
+            newNodeBadget.innerHTML = `
+            ${cart.getLength()}
+            `
+            elementBadget.appendChild(newNodeBadget);
+
         } else {
-            $('.header-dropdown').css('width','10rem');
+            $('.header-dropdown').css('width','10.5rem');
+            $('.header-dropdown-mainbtn').css('width','3.6rem');
 
             let newNode = document.createElement('li');
             newNode.className = 'header-dropdown-emptycart'
             newNode.innerHTML = `
-            Tu carrito está vacio
+            Tu carrito está vacio.
             `
             element.appendChild(newNode);
         }
