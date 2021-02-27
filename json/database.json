@@ -1,0 +1,64 @@
+[{
+    "name":"Zapatillas Nike Airmax Motion 2",
+    "price":9299,
+    "stock":10,
+    "img":"imgs/nike-airmax-motion2.jpg",
+    "gender":"male",
+    "category":"shoes"
+},{
+    "name":"Buzo Puma Classic",
+    "price":5499,
+    "stock":15,
+    "img":"imgs/buzo-puma-classic.jpg",
+    "gender":"male",
+    "category":"warmCloth"
+},{
+    "name":"Zapatillas Adidas Originals Run",
+    "price":7499,
+    "stock":5,
+    "img":"imgs/adidas-originals-run.jpg",
+    "gender":"femi",
+    "category":"shoes"
+},{
+    "name":"Remera Puma Tech",
+    "price":2199,
+    "stock":10,
+    "img":"imgs/remera-pum-tech1.jpg",
+    "gender":"male",
+    "category":"tshirt"
+},{
+    "name":"Short Nike Flex",
+    "price":4499,
+    "stock":10,
+    "img":"imgs/short-nike-flex1.jpg",
+    "gender":"male",
+    "category":"shoes"
+},{
+    "name":"Remera Adidas My Tee",
+    "price":1539,
+    "stock":10,
+    "img":"imgs/remera-adidas-mytee1.jpg",
+    "gender":"femi",
+    "category":"tshirt"
+},{
+    "name":"Zapatillas Converse All Star Chuck Taylor",
+    "price":7595,
+    "stock":10,
+    "img":"imgs/zap-converse-chuck-allstar1.jpg",
+    "gender":"femi",
+    "category":"shoes"
+},{
+    "name":"Short Nike 10K Glam Gx",
+    "price":3999,
+    "stock":10,
+    "img":"imgs/short-nike-10k-glam-gx1.jpg",
+    "gender":"femi",
+    "category":"short"
+},{
+    "name":"Campera Nike Sportswear Windrunner",
+    "price":10999,
+    "stock":10,
+    "img":"imgs/campera-nike-sportswear1.jpg",
+    "gender":"male",
+    "category":"warmCloth"
+}]

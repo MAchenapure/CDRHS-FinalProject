@@ -1,0 +1,116 @@
+/* Styles of cart.html*/
+.main-cart {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-top: 10rem;
+}
+
+.main-cart h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: .3rem;
+}
+
+.cart-card {
+    align-items: center;
+    border: thin solid #afafaf;
+    border-radius: .5rem;
+    display: flex;
+    height: 8rem;
+    margin-bottom: .3rem;
+    min-width: 630px;
+    transition: all 0.25s;
+}
+
+.cart-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.cart-card-img {
+    margin-left: 1.3rem;
+}
+
+.cart-card-img img {
+    height: 100px;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.cart-card-info {
+    display: table;
+    line-height: 1.3rem;
+    margin-left: 1.7rem;
+    min-width: 200px;
+    width: 640px;
+    padding: 0;
+}
+
+.cart-card-info h2 {
+    display: table-row;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    vertical-align: middle;
+}
+
+.cart-card-info p {
+    display: table-row;
+    vertical-align: middle;
+}
+
+.cart-card-price {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 800;
+    justify-content: flex-end;
+    margin-left: 6rem;
+    min-width: 8rem;
+    height: 2rem;
+}
+
+.cart-card-remove {
+    margin-left: 1rem;
+}
+
+.cart-card-remove img {
+    height: 30px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.cart-card-remove:hover img {
+    cursor: pointer;
+}
+
+.cart-empty {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 5rem;
+    justify-content: center;
+    
+}
+
+.cart-totalprice-container {
+    align-items: center;
+    display: flex;
+    height: 2.5rem;
+    justify-content: flex-end;
+    min-width: 630px;
+    margin-top: .2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.cart-totalprice {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    min-width: 8rem;
+}
+
+.cart-totalprice-text {
+    margin-right: .2rem;
+}
