@@ -12,6 +12,10 @@ class Product{
         this.quantity=0;
     }
 
+    addMoreQuant(quant){
+        this.quantity += quant;
+    }
+
     getCategory(){
         return this.cat;
     }

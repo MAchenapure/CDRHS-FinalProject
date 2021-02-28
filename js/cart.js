@@ -10,12 +10,25 @@ class Cart{
         let quantityInput = parseInt(document.getElementById(`inputQuant${index}`).value);
 
         if (quantityInput > 0) {
-            productsDB[index].setQuantity(quantityInput);
-            productsDB[index].setTotalPrice();
-            this.content.push(productsDB[index]);
+            let repeated = false;
+            for (let i = 0; i < cart.length; i++){
+                if (this.content[i].id == productsDB[index].id){
+                    productsDB[index].addMoreQuant(quantityInput);
+                    productsDB[index].setTotalPrice();
+                    repeated = true;
+                    break;
+                }
+            }
+
+            if(!repeated){
+                productsDB[index].setQuantity(quantityInput);
+                productsDB[index].setTotalPrice();
+                this.content.push(productsDB[index]);
+                this.setLength();
+            }
+            
             localStorage.setItem('cart', JSON.stringify(cart.getContent()));
 
-            this.setLength();
             this.printCart();
         }
         else {
