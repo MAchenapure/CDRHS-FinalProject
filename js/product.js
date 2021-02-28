@@ -1,12 +1,13 @@
 class Product{
     
-    constructor(name, price, stock, img, gender, category){
-        this.name=name;
-        this.price=Number(price);
-        this.stock=stock;
-        this.img=img;
-        this.gender=gender;
-        this.cat=category;
+    constructor(){
+        this.name = null;
+        this.price  = null;
+        this.stock = null;
+        this.id = null;
+        this.img = null;
+        this.gender = null;
+        this.cat = null;
         this.totalPrice=0;
         this.quantity=0;
     }
@@ -40,11 +41,40 @@ class Product{
         document.getElementById("containerCard").appendChild(newNode); 
     }
 
+    setCategory(cat){
+        this.cat = cat;
+    }
+
+    setGender(gender){
+        this.gender = gender;
+    }
+
+    setId(id){
+        this.id = id;
+    }
+
+    setImage(img){
+        this.img = img;
+    }
+
+    setName(name){
+        this.name = name;
+    }
+
+    setPrice(price){
+        this.price = Number(price);
+    }
+
     setQuantity(quant){
         this.quantity = quant;
+    }
+
+    setStock(stock){
+        this.stock = Number(stock);
     }
 
     setTotalPrice(){
         this.totalPrice = this.quantity*this.price;
     }
+
 }

@@ -14,10 +14,7 @@ class Cart{
             productsDB[index].setTotalPrice();
             this.content.push(productsDB[index]);
             localStorage.setItem('cart', JSON.stringify(cart.getContent()));
-            for(let i=0; i<this.length; i++) {
-                this.content[i].price = Number(this.content[i].price);
-                this.content[i].stock = Number(this.content[i].stock);
-            }
+
             this.setLength();
             this.printCart();
         }
@@ -33,6 +30,8 @@ class Cart{
         for(let i=0; i<this.length; i++) {
             this.content[i].price = Number(this.content[i].price);
             this.content[i].stock = Number(this.content[i].stock);
+            this.content[i].totalPrice = Number(this.content[i].totalPrice);
+            this.content[i].quantity = Number(this.content[i].quantity);
         }
 
         this.setLength();
@@ -239,7 +238,11 @@ class Cart{
     }
 
     setLength(){
-        this.length = this.content.length
+        this.length = this.content.length;
+    }
+
+    setTotalPrice(){
+        this.totalPrice = this.quantity*this.price;
     }
 
 }
