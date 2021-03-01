@@ -45,8 +45,8 @@ body {
     width: 100%;
 }
 
-.container-card .card-product {
-    border: thin solid #DDDDDD;
+.card-product {
+    border: thin solid #dddddd;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     height: 22rem;

@@ -14,6 +14,7 @@ class Product{
 
     addMoreQuant(quant){
         this.quantity += quant;
+        console.log(`add more quant: ${quant}`);
     }
 
     getCategory(){
@@ -34,14 +35,15 @@ class Product{
 
     printCard(productIndex){
         let newNode = document.createElement('div');
-        newNode.className = 'card-product'
+        newNode.className = 'card-product';
+        newNode.id = `prodCard${productIndex}`;
         newNode.innerHTML = `
         <img src="${this.img}">
         <h4>${this.name}</h4>
         <p>Precio: $${this.price}</p>
         <p>Cantidad: <input type="number" value="0" min="0" max="9" id="inputQuant${productIndex}"></p>
         <button onclick='cart.addProduct(${productIndex})'>Añadir al carrito</button>
-        `
+        `;
         document.getElementById("containerCard").appendChild(newNode); 
     }
 

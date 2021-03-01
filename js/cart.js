@@ -10,13 +10,14 @@ class Cart{
         let quantityInput = parseInt(document.getElementById(`inputQuant${index}`).value);
 
         if (quantityInput > 0) {
+            console.log(`quantity input: ${quantityInput}`);
             let repeated = false;
             for (let i = 0; i < cart.length; i++){
                 if (this.content[i].id == productsDB[index].id){
-                    productsDB[index].addMoreQuant(quantityInput);
-                    productsDB[index].setTotalPrice();
+                    console.log(`this content id: ${this.content[i].id}`);
+                    this.content[i].quantity += quantityInput;
+                    this.content[i].totalPrice = this.content[i].quantity*this.content[i].price;
                     repeated = true;
-                    break;
                 }
             }
 
@@ -29,7 +30,14 @@ class Cart{
             
             localStorage.setItem('cart', JSON.stringify(cart.getContent()));
 
+            console.log(`print de cart`);
+
             this.printCart();
+
+            // $(`#prodCard${index}`).animate({'border'': '55em'})
+            // .css({'border-color': '#333'})
+            // .siblings().animate({'width': '5em'})
+            // .css({'border-color': '#ffba00'});
         }
         else {
             $('#quantModal').fadeIn(150);
@@ -95,6 +103,7 @@ class Cart{
     }
 
     printCart(){
+        console.log(`printCart accessing`);
         // Cart printing on header.  
         let element = document.getElementById('dropdownMenu');
         let elementBadget = document.getElementById('badgetCartCont');
