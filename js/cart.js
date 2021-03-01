@@ -34,10 +34,9 @@ class Cart{
 
             this.printCart();
 
-            // $(`#prodCard${index}`).animate({'border'': '55em'})
-            // .css({'border-color': '#333'})
-            // .siblings().animate({'width': '5em'})
-            // .css({'border-color': '#ffba00'});
+            $(`#prodAddCard${index}`).fadeIn(350, function(){
+                $(`#prodAddCard${index}`).fadeOut(300);
+            });          
         }
         else {
             $('#quantModal').fadeIn(150);

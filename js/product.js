@@ -43,6 +43,7 @@ class Product{
         <p>Precio: $${this.price}</p>
         <p>Cantidad: <input type="number" value="0" min="0" max="9" id="inputQuant${productIndex}"></p>
         <button onclick='cart.addProduct(${productIndex})'>Añadir al carrito</button>
+        <div class="card-product-added" id="prodAddCard${productIndex}"></div>
         `;
         document.getElementById("containerCard").appendChild(newNode); 
     }

@@ -45,6 +45,19 @@ body {
     width: 100%;
 }
 
+.card-product-added {
+    background-color: rgba(51, 255, 0, 0.13);
+    border: thin solid #4FFF54;
+    border-radius: 8px;
+    display: none;
+    height: 21.906rem; 
+    left: 0;
+    position: absolute;
+    top:0;
+    width: 20.47rem;
+    z-index: 1;
+}
+
 .card-product {
     border: thin solid #dddddd;
     border-radius: 8px;
@@ -52,7 +65,7 @@ body {
     height: 22rem;
     margin: 0 20px 30px 20px;
     overflow: hidden;
-    padding-top: .7rem;
+    position: relative;
     text-align: center;
     transition: all 0.25s;
     width: 20.6rem;
@@ -66,6 +79,7 @@ body {
 .container-card .card-product img {
     height: 220px;
     margin-bottom: .4rem;
+    margin-top: .7rem;
     width: 240px;
 }
 
@@ -118,7 +132,7 @@ body {
     background-color: rgba(0,0,0,0.85);
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
 }
 
 .header-brand-logo {
@@ -243,7 +257,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
   }
   
 .modal-content {
