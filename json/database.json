@@ -1,73 +1,118 @@
 [{
-    "name":"Zapatillas Nike Airmax Motion 2",
-    "price":9299,
+    "name":"Zapatillas Nike Air Max Motion 2",
+    "unit_price":9299,
     "stock":10,
     "img":"imgs/nike-airmax-motion2.jpg",
     "gender":"male",
     "category":"shoes",
-    "id":"0001"
+    "id":"0001",
+    "brand": "nike"
 },{
     "name":"Buzo Puma Classic",
-    "price":5499,
+    "unit_price":5499,
     "stock":15,
     "img":"imgs/buzo-puma-classic.jpg",
     "gender":"male",
     "category":"warmCloth",
-    "id":"0002"
+    "id":"0002",
+    "brand": "puma"
 },{
     "name":"Zapatillas Adidas Originals Run",
-    "price":7499,
+    "unit_price":7499,
     "stock":5,
     "img":"imgs/adidas-originals-run.jpg",
     "gender":"femi",
     "category":"shoes",
-    "id":"0003"
+    "id":"0003",
+    "brand": "adidas"
 },{
     "name":"Remera Puma Tech",
-    "price":2199,
+    "unit_price":2199,
     "stock":10,
     "img":"imgs/remera-pum-tech1.jpg",
     "gender":"male",
     "category":"tshirt",
-    "id":"0004"
+    "id":"0004",
+    "brand": "puma"
 },{
     "name":"Short Nike Flex",
-    "price":4499,
+    "unit_price":4499,
     "stock":10,
     "img":"imgs/short-nike-flex1.jpg",
     "gender":"male",
-    "category":"shoes",
-    "id":"0005"
+    "category":"short",
+    "id":"0005",
+    "brand": "nike"
 },{
     "name":"Remera Adidas My Tee",
-    "price":1539,
+    "unit_price":1539,
     "stock":10,
     "img":"imgs/remera-adidas-mytee1.jpg",
     "gender":"femi",
     "category":"tshirt",
-    "id":"0006"
+    "id":"0006",
+    "brand": "adidas"
 },{
     "name":"Zapatillas Converse All Star Chuck Taylor",
-    "price":7595,
+    "unit_price":7595,
     "stock":10,
     "img":"imgs/zap-converse-chuck-allstar1.jpg",
     "gender":"femi",
     "category":"shoes",
-    "id":"0007"
+    "id":"0007",
+    "brand": "converse"
 },{
     "name":"Short Nike 10K Glam Gx",
-    "price":3999,
+    "unit_price":3999,
     "stock":10,
     "img":"imgs/short-nike-10k-glam-gx1.jpg",
     "gender":"femi",
     "category":"short",
-    "id":"0008"
+    "id":"0008",
+    "brand": "nike"
 },{
     "name":"Campera Nike Sportswear Windrunner",
-    "price":10999,
+    "unit_price":10999,
     "stock":10,
     "img":"imgs/campera-nike-sportswear1.jpg",
     "gender":"male",
     "category":"warmCloth",
-    "id":"0009"
+    "id":"0009",
+    "brand": "nike"
+},{
+    "name":"Campera Under Armour Fleece Taped",
+    "unit_price":7799,
+    "stock":10,
+    "img":"imgs/campera-under-armour.jpg",
+    "gender":"femi",
+    "category":"warmCloth",
+    "id":"0010",
+    "brand": "underArmour"
+},{
+    "name":"Campera Nike Gym Hoodie Fz",
+    "unit_price":7499,
+    "stock":10,
+    "img":"imgs/campera-nike-gym-hoodie.jpg",
+    "gender":"femi",
+    "category":"warmCloth",
+    "id":"0011",
+    "brand": "Nike"
+},{
+    "name":"Zapatillas Nike Air Max Dia",
+    "unit_price":9599,
+    "stock":10,
+    "img":"imgs/zap-nike-airmax-dia.jpg",
+    "gender":"femi",
+    "category":"shoes",
+    "id":"0012",
+    "brand": "Nike"
+},{
+    "name":"Zapatillas Adidas Superstar",
+    "unit_price":10999,
+    "stock":10,
+    "img":"imgs/adidas-superstar.jpg",
+    "gender":"male",
+    "category":"shoes",
+    "id":"0013",
+    "brand": "Adidas"
 }]

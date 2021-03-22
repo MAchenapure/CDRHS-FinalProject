@@ -29,7 +29,7 @@
                 <ul class="dropdown-menu dropdown-menu-end header-dropdown" id="dropdownMenu">
                 </ul>
             </div>                
-        </div> 
+        </div>
 
         <!-- Nav bar -->
         <ul class="nav nav-container">
@@ -39,8 +39,8 @@
                     <ul class="dropdown-menu nav-dropdown-ul">
                         <li><a class="dropdown-item nav-dropdown-item" href="remeras.html">Remeras</a></li>
                         <li><a class="dropdown-item nav-dropdown-item" href="abrigo.html">Ropa de abrigo</a></li>
-                      <li><a class="dropdown-item nav-dropdown-item" href="shorts.html">Shorts</a></li>
-                      <li><a class="dropdown-item nav-dropdown-item" href="zapatillas.html">Zapatillas</a></li>
+                        <li><a class="dropdown-item nav-dropdown-item" href="shorts.html">Shorts</a></li>
+                        <li><a class="dropdown-item nav-dropdown-item" href="zapatillas.html">Zapatillas</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -48,6 +48,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="hombre.html">Hombre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="todo.html">Todos los productos</a>
                 </li>
             </div>
         </ul>
@@ -66,12 +69,40 @@
               </nav>
         </div>
 
-        <div class="container">
-            <div class="container-card" id="containerCard">
+        <div class="products-filters-container">
+            <aside class="filters-container">
+    
+                <div class="filters-section">
+                    <h4>Género</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox-woman">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Mujer
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox-man">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Hombre
+                        </label>
+                    </div>
+                </div>
+    
+            </aside>
+    
+            <div class="container">
+                <div class="container-card" id="containerCard">
+                </div>
             </div>
         </div>
 
     </main>
+
+    <footer class = "footer">
+        <h5>
+            Velret Shop © 2021
+        </h5>
+    </footer>
 
     <!-- Quantity requested modal -->
     <div id="quantModal" class="modal-container">
@@ -84,11 +115,11 @@
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/product.js"></script>
+    <script src="js/productsMP.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>

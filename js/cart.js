@@ -16,7 +16,7 @@ class Cart{
                 if (this.content[i].id == productsDB[index].id){
                     console.log(`this content id: ${this.content[i].id}`);
                     this.content[i].quantity += quantityInput;
-                    this.content[i].totalPrice = this.content[i].quantity*this.content[i].price;
+                    this.content[i].totalPrice = this.content[i].quantity*this.content[i].unit_price;
                     repeated = true;
                 }
             }
@@ -48,7 +48,7 @@ class Cart{
         this.content = data;
 
         for(let i=0; i<this.length; i++) {
-            this.content[i].price = Number(this.content[i].price);
+            this.content[i].unit_price = Number(this.content[i].unit_price);
             this.content[i].stock = Number(this.content[i].stock);
             this.content[i].totalPrice = Number(this.content[i].totalPrice);
             this.content[i].quantity = Number(this.content[i].quantity);
@@ -59,6 +59,10 @@ class Cart{
 
     getContent(){
         return this.content;
+    }
+
+    getContentIndex(i){
+        return this.content[i];
     }
 
     getLength(){
@@ -78,7 +82,7 @@ class Cart{
     }
 
     getProductPrice(index){
-        return this.content[index].price;
+        return this.content[index].unit_price;
     }
 
     getProductQuantity(index){
@@ -102,7 +106,6 @@ class Cart{
     }
 
     printCart(){
-        console.log(`printCart accessing`);
         // Cart printing on header.  
         let element = document.getElementById('dropdownMenu');
         let elementBadget = document.getElementById('badgetCartCont');
@@ -216,6 +219,7 @@ class Cart{
                 <div class="cart-totalprice">
                 <span>$${cart.getTotalCartPrice()}</span>
                 </div>
+                <button type="button" class="btn btn-primary cart-purchase-button" onclick="mercadoPagoController()">Comprar</button>
                 `
                 elementFinalPrice.appendChild(newNode);
 
@@ -263,7 +267,7 @@ class Cart{
     }
 
     setTotalPrice(){
-        this.totalPrice = this.quantity*this.price;
+        this.totalPrice = this.quantity*this.unit_price;
     }
 
 }

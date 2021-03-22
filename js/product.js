@@ -2,7 +2,7 @@ class Product{
     
     constructor(){
         this.name = null;
-        this.price  = null;
+        this.unit_price  = null;
         this.stock = null;
         this.id = null;
         this.img = null;
@@ -10,11 +10,16 @@ class Product{
         this.cat = null;
         this.totalPrice=0;
         this.quantity=0;
+        this.brand = null;
     }
 
     addMoreQuant(quant){
         this.quantity += quant;
         console.log(`add more quant: ${quant}`);
+    }
+    
+    getBrand(){
+        return this.brand;
     }
 
     getCategory(){
@@ -40,12 +45,16 @@ class Product{
         newNode.innerHTML = `
         <img src="${this.img}">
         <h4>${this.name}</h4>
-        <p>Precio: $${this.price}</p>
+        <p>Precio: $${this.unit_price}</p>
         <p>Cantidad: <input type="number" value="0" min="0" max="9" id="inputQuant${productIndex}"></p>
         <button onclick='cart.addProduct(${productIndex})'>Añadir al carrito</button>
         <div class="card-product-added" id="prodAddCard${productIndex}"></div>
         `;
         document.getElementById("containerCard").appendChild(newNode); 
+    }
+
+    setBrand(brand){
+        this.brand = brand;
     }
 
     setCategory(cat){
@@ -68,8 +77,8 @@ class Product{
         this.name = name;
     }
 
-    setPrice(price){
-        this.price = Number(price);
+    setPrice(unit_price){
+        this.unit_price = Number(unit_price);
     }
 
     setQuantity(quant){
@@ -81,7 +90,7 @@ class Product{
     }
 
     setTotalPrice(){
-        this.totalPrice = this.quantity*this.price;
+        this.totalPrice = this.quantity*this.unit_price;
     }
 
 }
